@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { postJSON } from "@/lib/api";
 
-export default function Payment() {
+const Payment: React.FC = () => {
   const [rid, setRid] = useState("");
   const [amount, setAmount] = useState(100);
   const [card, setCard] = useState("");
@@ -35,4 +35,6 @@ export default function Payment() {
       {msg && <div className="text-sm">{msg}</div>}
     </form>
   );
-}
+};
+
+export default Payment;

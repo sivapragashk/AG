@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { postJSON } from "@/lib/api";
 
-export default function Confirm() {
+const Confirm: React.FC = () => {
   const [rid, setRid] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
 
@@ -31,4 +31,6 @@ export default function Confirm() {
       {msg && <div className="text-sm">{msg}</div>}
     </form>
   );
-}
+};
+
+export default Confirm;

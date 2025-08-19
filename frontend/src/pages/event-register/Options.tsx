@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { postJSON } from "@/lib/api";
 
-export default function Options() {
+const Options: React.FC = () => {
   const [rid, setRid] = useState("");
   const [sessionId, setSessionId] = useState("");
   const [agree, setAgree] = useState(false);
@@ -37,4 +37,6 @@ export default function Options() {
       {msg && <div className="text-sm">{msg}</div>}
     </form>
   );
-}
+};
+
+export default Options;

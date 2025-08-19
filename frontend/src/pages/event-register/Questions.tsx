@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { postJSON } from "@/lib/api";
 
-export default function Questions() {
+const Questions: React.FC = () => {
   const [rid, setRid] = useState("");
   const [q1, setQ1] = useState("");
   const [q2, setQ2] = useState("");
@@ -35,4 +35,6 @@ export default function Questions() {
       {msg && <div className="text-sm">{msg}</div>}
     </form>
   );
-}
+};
+
+export default Questions;

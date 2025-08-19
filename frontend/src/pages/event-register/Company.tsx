@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { postJSON } from "@/lib/api";
 
-export default function Company() {
+const Company: React.FC = () => {
   const [companyName, setCompanyName] = useState("");
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -50,4 +50,6 @@ export default function Company() {
       {response && <div className="mt-4 text-sm">{response}</div>}
     </div>
   );
-}
+};
+
+export default Company;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { postJSON } from "@/lib/api";
 
-export default function User() {
+const User: React.FC = () => {
   const [rid, setRid] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -35,4 +35,6 @@ export default function User() {
       {msg && <div className="text-sm">{msg}</div>}
     </form>
   );
-}
+};
+
+export default User;
