@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { postJSON } from "@/lib/api";
 
 export default function Confirm() {
   const [rid, setRid] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!rid) {
+      try {
+        const v = localStorage.getItem("rid") || "";
+        if (v) setRid(v);
+      } catch {}
+    }
+  }, [rid]);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();

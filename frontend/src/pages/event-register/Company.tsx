@@ -15,6 +15,9 @@ export default function Company() {
         "/api/event-register/company",
         { company_name: companyName }
       );
+      try {
+        localStorage.setItem("rid", data.registration_id);
+      } catch {}
       setResponse(`Registration ${data.registration_id}`);
     } catch (err: any) {
       setResponse(err.message || "Error");

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { postJSON } from "@/lib/api";
 
 export default function Payment() {
@@ -6,6 +6,15 @@ export default function Payment() {
   const [amount, setAmount] = useState(100);
   const [card, setCard] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!rid) {
+      try {
+        const v = localStorage.getItem("rid") || "";
+        if (v) setRid(v);
+      } catch {}
+    }
+  }, [rid]);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
