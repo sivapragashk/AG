@@ -1,0 +1,123 @@
+<project name="LMS" default="deploy.ekpdev01" basedir=".">
+
+	<description>
+		LMS ant build file
+	</description>
+
+
+	<property name="src" location="${basedir}\src\main\java"/>
+	<property name="testsrc" location="${basedir}\src\test\java"/>
+	<property name="webapp" location="${basedir}\src\main\webapp"/>
+	<property name="build" location="${basedir}\build"/>
+
+	<property name="working" location="${build}\lc"/>
+	<property name="classes" location="${working}\WEB-INF\classes"/>
+	<property name="lib" location="${working}\WEB-INF\lib"/>
+
+	<property name="dist" location="${basedir}\dist"/>
+	<property name="war" location="${dist}\ag.war"/>
+
+	<taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask">
+		<classpath>
+			<pathelement location="D:\JARS\catalina-ant.jar"/>
+		</classpath>
+	</taskdef>
+
+	<taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask">
+		<classpath>
+			<pathelement location="D:\JARS\catalina-ant.jar"/>
+		</classpath>
+	</taskdef>
+
+	<target name="init">
+		<tstamp/>
+		<mkdir dir="${build}"/>
+		<mkdir dir="${working}"/>
+		<mkdir dir="${classes}"/>
+		<mkdir dir="${lib}"/>
+	</target>
+
+
+	<target name="compile" depends="init" description="compile the source">
+		<javac srcdir="${src}" destdir="${classes}"/>
+		<copy todir="${classes}">
+			<fileset dir="${src}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+<!--
+		<javac srcdir="${testsrc}" destdir="${classes}"/>
+		<copy todir="${classes}">
+			<fileset dir="${testsrc}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+-->
+		<copy todir="${lib}">
+			<fileset dir="${basedir}\lib">
+				<include name="**/*.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="${working}">
+			<fileset dir="${webapp}">
+				<exclude name="**/web.xml"/>
+			</fileset>
+		</copy>
+	</target>
+
+
+	<target name="clean" description="clean up">
+		<delete dir="${build}"/>
+	</target>
+
+	<target name="dist-dev" depends="compile" description="generate the distribution">
+		<mkdir dir="${dist}"/>
+		<war destfile="${war}" basedir="${working}" webxml="${basedir}/src/main/webapp/WEB-INF/web-dev.xml" compress="false" manifest="${basedir}/MANIFEST.MF"/>
+	</target>
+
+	<target name="cleanbuild-dev" depends="clean,dist-dev" description="Build app"/>
+
+	<target name="dist-qa" depends="compile" description="generate the distribution">
+		<mkdir dir="${dist}"/>
+		<war destfile="${war}" basedir="${working}" webxml="${basedir}/src/main/webapp/WEB-INF/web-qa.xml" compress="false" manifest="${basedir}/MANIFEST.MF"/>
+	</target>
+
+	<target name="cleanbuild-qa" depends="clean,dist-qa" description="Build app"/>
+
+	<target name="dist-prd" depends="compile" description="generate the distribution">
+		<mkdir dir="${dist}"/>
+		<war destfile="${war}" basedir="${working}" webxml="${basedir}/src/main/webapp/WEB-INF/web-prd.xml" compress="false" manifest="${basedir}/MANIFEST.MF"/>
+	</target>
+
+	<target name="cleanbuild-prd" depends="clean,dist-prd" description="Build app"/>
+
+	<target name="undeploy.ekpdev01" description="Remove web application">
+		<undeploy url="http://ekpdev01/manager" username="admin" password="password"
+	            path="/ag"/>
+	</target>
+
+	<target name="deploy.ekpdev01" depends="cleanbuild-dev">
+		<deploy url="http://ekpdev01/manager" username="admin" password="password"
+		path="/ag" war="file:${war}"/>
+	</target>
+
+	<target name="undeploy.ekpqa01" description="Remove web application">
+		<undeploy url="http://ekpqa01/manager" username="admin" password="password"
+	            path="/lms"/>
+	</target>
+
+	<target name="deploy.ekpqa01" depends="cleanbuild-qa">
+		<deploy url="http://ekpqa01/manager" username="admin" password="password"
+		path="/lms" war="file:${war}"/>
+	</target>
+
+	<target name="undeploy.ekpprd01" description="Remove web application">
+		<undeploy url="http://ekpprd01/manager" username="admin" password="password"
+	            path="/lms"/>
+	</target>
+
+	<target name="deploy.ekpprd01" depends="cleanbuild-prd">
+		<deploy url="http://ekpprd01/manager" username="admin" password="password"
+		path="/lms" war="file:${war}"/>
+	</target>
+</project>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN' 'http://java.sun.com/j2ee/dtds/web-app_2_2.dtd'>
+<web-app>
+	<display-name>LMS</display-name>
+	<distributable></distributable>
+ 
+	<context-param>
+		<param-name>EMAIL_SERVER_URL</param-name>
+		<param-value>mailhost</param-value>
+	</context-param>  
+	
+	<context-param>
+		<param-name>ONYX_WRITE</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+    <context-param>
+		<param-name>PAYPAL_USERNAME</param-name>
+		<param-value>bcalaci</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>PAYPAL_VENDOR</param-name>
+		<param-value>hunterd3</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>PAYPAL_PARTNER</param-name>
+		<param-value>PayPal</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>PAYPAL_PASSWORD</param-name>
+		<param-value>bc@l@c1</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>PAYPAL_HOSTADDR</param-name>
+		<param-value>pilot-payflowpro.paypal.com</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>HDCATALOG_XMLRPC_URL</param-name>
+		<param-value>https://my-dev.hunterdouglas.com/xmlrpc.php</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>HDCATALOG_XMLRPC_ACCESS_KEY</param-name>
+		<param-value>BoogieW00g1e</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>HDCATALOG_WRITE</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>HDCATALOG_TRANSLATE_DEF_PRODUCT</param-name>
+		<param-value>/home/ecom/lc/translate-def-product.txt</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>HDCATALOG_TRANSLATE_DEF_PRODFAM</param-name>
+		<param-value>/home/ecom/lc/translate-def-prodfam.txt</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>HDCATALOG_TRANSLATE_DEF_PRODCATSORT</param-name>
+		<param-value>/home/ecom/lc/translate-def-prodcatsort.txt</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>HDCATALOG_TRANSLATE_DEF_LEARNINGCENTER</param-name>
+		<param-value>/home/ecom/lc/translate-def-learningcenter.txt</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>HDCATALOG_TRANSLATE_DEF_CATEGORY</param-name>
+		<param-value>/home/ecom/lc/translate-def-category.txt</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>HDCATALOG_TRANSLATE_DEF_ACCESSTAGS</param-name>
+		<param-value>/home/ecom/lc/translate-def-accesstags.txt</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>serverName</param-name>
+		<param-value>http://ekpdev01</param-value>
+	</context-param>
+
+	<filter>
+	   <filter-name>CAS Single Sign Out Filter</filter-name>
+	   <filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<filter-class>com.randomcoder.security.DisableUrlSessionFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>CAS Authentication Filter</filter-name>
+  		<filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
+		<init-param>
+			<param-name>casServerLoginUrl</param-name>
+			<param-value>https://stage.hunterdouglas.com/signon/login</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>CAS Validation Filter</filter-name>
+		<filter-class>org.jasig.cas.client.validation.Cas10TicketValidationFilter</filter-class>
+		<init-param>
+			<param-name>casServerUrlPrefix</param-name>
+			<param-value>https://stage.hunterdouglas.com/signon</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
+	</filter>
+
+<!-- HomeControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>HomeControlServlet</servlet-name>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>HomeControlServlet</servlet-name>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>HomeControlServlet</servlet-name>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>HomeControlServlet</servlet-name>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>HomeControlServlet</servlet-name>
+	</filter-mapping>
+<!-- CertificationControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>CertificationControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>CertificationControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>CertificationControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>CertificationControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>CertificationControlServlet</servlet-name>
+	</filter-mapping>
+
+<!-- TodolistControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>ToDoListControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>ToDoListControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>ToDoListControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>ToDoListControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>ToDoListControlServlet</servlet-name>
+	</filter-mapping>
+
+<!-- TodolistCourseControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>ToDoListCourseControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>ToDoListCourseControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>ToDoListCourseControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>ToDoListCourseControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>ToDoListCourseControlServlet</servlet-name>
+	</filter-mapping>
+
+<!-- PdpSignUpControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>PdpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>PdpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>PdpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>PdpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>PdpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	
+<!-- PfpSignupControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>PfpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>PfpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>PfpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>PfpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>PfpSignupControlServlet</servlet-name>
+	</filter-mapping>
+	
+<!-- CourseControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>CourseControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>CourseControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>CourseControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>CourseControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>CourseControlServlet</servlet-name>
+	</filter-mapping>	
+	
+<!-- CourseLaunchControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>CourseLaunchControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>CourseLaunchControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>CourseLaunchControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>CourseLaunchControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>CourseLaunchControlServlet</servlet-name>
+	</filter-mapping>	
+		
+<!-- EventRegisterControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>EventRegisterControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>EventRegisterControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>EventRegisterControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>EventRegisterControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>EventRegisterControlServlet</servlet-name>
+	</filter-mapping>	
+		
+<!-- ProgramControlControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>ProgramControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>ProgramControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>ProgramControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>ProgramControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>ProgramControlServlet</servlet-name>
+	</filter-mapping>			
+		
+<!-- PipSignupControlServlet -->
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<servlet-name>PipSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<servlet-name>PipSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Authentication Filter</filter-name>
+		<servlet-name>PipSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Validation Filter</filter-name>
+		<servlet-name>PipSignupControlServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<servlet-name>PipSignupControlServlet</servlet-name>
+	</filter-mapping>
+		
+	<listener>
+	    <listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>HomeControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.HomeControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>CertificationControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.CertificationControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ToDoListControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.ToDoListControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ToDoListCourseControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.ToDoListCourseControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>PdpSignupControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.PdpSignupControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>PfpSignupControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.PfpSignupControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>CourseControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.CourseControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>CourseLaunchControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.CourseLaunchControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>EventRegisterControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.EventRegisterControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ProgramControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.ProgramControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>PipSignupControlServlet</servlet-name>
+		<servlet-class>com.hd.cedg.lms.servlet.PipSignupControlServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HomeControlServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CertificationControlServlet</servlet-name>
+		<url-pattern>/certifications</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ToDoListControlServlet</servlet-name>
+		<url-pattern>/todolist</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ToDoListCourseControlServlet</servlet-name>
+		<url-pattern>/todolist-courses</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PdpSignupControlServlet</servlet-name>
+		<url-pattern>/pdp-signup</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PfpSignupControlServlet</servlet-name>
+		<url-pattern>/pfp-signup</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CourseControlServlet</servlet-name>
+		<url-pattern>/course</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CourseLaunchControlServlet</servlet-name>
+		<url-pattern>/course-launch</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EventRegisterControlServlet</servlet-name>
+		<url-pattern>/event-register</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProgramControlServlet</servlet-name>
+		<url-pattern>/program</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PipSignupControlServlet</servlet-name>
+		<url-pattern>/pip-signup</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+</web-app>

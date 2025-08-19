@@ -1,0 +1,60 @@
+div#container {
+	margin: 0 auto;
+    min-height: 500px;
+    overflow: auto;
+    text-align: left;
+    width: 975px;
+    padding-bottom: 50px;
+}
+
+div#header {
+	height: 150px;
+    width: 970px;
+}
+
+div#header div#hdlogo{
+	background-image: url("../image/hd-logo.png");
+    float: right;
+    height: 100px;
+    margin-top: 35px;
+    position: relative;
+    width: 400px;
+}
+
+em {
+    color: #4397D5;
+    font-style: normal;
+}
+
+div#program div#course-evaluation p {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+div#right-nav div#error-header {
+	margin: 20px;
+}
+div#right-nav div#error-info {
+	margin: 20px;
+	line-height: 20px;
+}
+div#right-nav span.error {
+	color: red;
+	display: block;
+	font-weight: bold;
+}
+div#right-nav div#return-link a {
+    background: url("../image/function-button.jpg") repeat-x scroll left top #62A1C2;
+    border-color: #E0E0E5 #7C7D77 #7C7D77 #E0E0E5;
+    border-style: solid;
+    border-width: 2px;
+    color: #404040;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    margin: 20px;
+}

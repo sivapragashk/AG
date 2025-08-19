@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/cas-client-core-3.1.10.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/commons-httpclient-3.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/ControlServlet.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/DataUtils.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/email.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/LCUserData.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/payflow.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/PayPalTransactionService.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/weblogic.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/ws-commons-util-1.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/xml-apis.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/xmlrpc-client-3.1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/xmlrpc-common-3.1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/xmlrpc-server-3.1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Vinoth/lc jars/xmlsec-1.3.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

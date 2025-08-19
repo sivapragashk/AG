@@ -1,0 +1,50 @@
+body {
+	text-align: center;
+	background-color: #b6bbb5;
+	background-image: url("../images/background.jpg");
+	background-repeat: repeat-x;
+	font-family: Helvetica, Arial, Sans-serif;
+	font-size: 0.8em;
+	color: #404040;
+}
+a {
+	color: #569abd;
+	font-weight: bold;
+}
+a:hover {
+	color: #3b6b82;
+}
+
+div#container {
+	width: 600px;
+	margin: 100px auto 0px auto;
+	border: 2px solid #569abd;
+	background-color: #d0d0d0;
+	text-align: left;
+}
+div#container p {
+	padding: 12px 12px 0px 12px;
+}
+div#container div#course-return {
+	margin: 0px auto;
+	padding: 24px 0px 12px 0px;
+	text-align: center;
+}
+div#container div#course-return a {
+	display: inline-block;
+	color: white;
+	background-image: url("../images/button-bg.gif");
+	background-repeat: no-repeat;
+	font-size: 1.4em;
+	width: 290px;
+	height: 40px;
+	font-weight: bold;
+	text-decoration: none;
+}
+div#container div#course-return a:hover {
+	background-image: url("../images/button-bg-hover.gif");
+}
+div#container div#course-return a span {
+	display: block;
+	padding-top: 11px;
+}

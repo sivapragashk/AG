@@ -1,0 +1,739 @@
+body {
+    background-image: url("../image/certificationbg.png");
+    color: #666666;
+    font-family: Helvetica,Arial,Sans-serif;
+    font-size: 0.8em;
+    margin: 0;
+    text-align: center;
+}
+a {
+	color: #4397D5;
+}
+a:hover {
+	color: #3b6b82;
+}
+div#main-content {
+    min-height: 460px;
+    overflow: auto;
+    width: 970px;
+}
+
+div#main-content div#navigations {
+    min-height: 75px;
+    overflow: auto;
+}
+
+div#main-content div#navigations div#standard-nav span{
+	float: left;
+    margin: 4px;
+}
+div#main-content div#navigations div#standard-nav span#home {
+	background-image: url("../image/certifications/home.png");
+	height:215px;
+	width: 88px;
+}
+div#main-content div#navigations div#standard-nav span#certifications {
+	background-image: url("../image/certifications/certifications.png");
+	height:215px;
+	width: 115px;
+}
+
+div#main-content div#navigations div#cert-levels a#cert{
+	background-image: url("../image/certifications/certlevel-bg.png");
+	margin: 4px;
+    width: 241px;
+    height: 102px;
+    float: left;
+    color: #FFFFFF;
+	text-decoration: none;
+}
+
+div#main-content div#navigations div#cert-levels a#no-cert{
+	margin: 4px;
+    width: 241px;
+    height: 102px;
+    float: left;
+}
+
+div#main-content div#navigations div#cert-levels span#certificate {
+	font-size: 20px;
+	font-weight: bold;
+	padding-left:15px;
+    display: inline-table;
+}
+
+div#main-content div#navigations div#cert-levels span#level {
+	font-size: 14px;
+	padding:15px;	
+
+}
+div#main-content div#navigations div#cert-levels span#level em {
+	font-size: 10px;
+	padding:15px;	
+
+}
+
+div#main-content div#cert-details div#left-nav {
+	width: 225px;
+	float: left;
+	min-height: 700px;
+}
+
+div#main-content div#cert-details div#right-nav {
+	width: 740px;
+	float: left;
+	min-height: 400px;
+	overflow: auto;
+	background-color: #FFFFFF;
+	padding-bottom: 20px;
+	 border: 2px double #C6C0B7;
+}
+
+div#main-content div#cert-details div#right-nav-courses {
+    background-color: #FFFFFF;
+    border: 2px double #C6C0B7;
+    float: left;
+    margin-bottom: 10px;
+    min-height: 130px;
+    overflow: auto;
+    width: 740px;
+}
+div#main-content div#cert-details div#nav-tabs {
+	width: 740px;
+	float: left;
+	height: 20px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+div#main-content div#cert-details div#nav-tabs div#tabs{
+    background-color: #ABCEE8;
+    float: left;
+    height: 20px;
+    margin-left: 5px;
+    width: 118px;
+    line-height: 18px;
+}
+div#main-content div#cert-details div#nav-tabs div#selected-tab{
+    background-color: #589DCF;
+    float: left;
+    height: 20px;
+    margin-left: 5px;
+    width: 118px;
+    line-height: 18px;
+}
+
+div#main-content div#cert-details div#right-nav div#header {
+	height: 30px;
+	width: 700px;
+	margin: 20px 20px 0;
+}
+div#main-content div#cert-details div#right-nav div#cert-actions {
+	margin: 30px auto;
+    min-height: 50px;
+    width: 700px;
+}
+div#main-content div#cert-details div#right-nav div#nav-1 {
+	float: left;
+    width: 535px;
+}
+
+div#main-content div#cert-details div#right-nav div#cert-actions a {
+    padding: 6px 20px;
+    background-color: #4397D5;
+    border-color: #E0E0E5 #7C7D77 #7C7D77 #E0E0E5;
+    border-style: solid;
+    border-width: 2px;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+div#main-content div#cert-details div#right-nav div#header div#title {
+	font-size: 22px;
+	font-weight: bold;
+	color: #4397D5;
+	width:445px;
+	float: left;
+}
+div#main-content div#cert-details div#right-nav div#header div#title span{
+	font-size: 13px;
+}
+div#main-content div#cert-details div#right-nav div#header div#cert-date {
+	font-size: 13px;
+	width: 240px;
+	float: left;
+	line-height: 20px;
+}
+div#main-content div#cert-details div#right-nav div#summary {
+	min-height: 100px;
+	width: 700px;
+	overflow: auto;
+	margin: 25px auto;
+	font-size: 12px;
+	line-height: 17px;
+}
+div#main-content div#cert-details div#right-nav div#full-list {
+	background-color: #E8E7ED;
+    margin: 0 auto 12px;
+    min-height: 115px;
+    width: 700px;
+}
+
+div#main-content div#cert-details div#right-nav div#full-list div#course-details {
+    color: #4595D0;
+    font-size: 10pt;
+    height: 45px;
+    line-height: 20px;
+    padding: 10px;
+}
+div#main-content div#cert-details div#right-nav div#full-list div#status {
+    background-color: #579CD0;
+    float: left;
+    margin: 4px 0 0 6px;
+    width: 548px;
+}
+div#main-content div#cert-details div#right-nav-courses div#course-details {
+	font-size: 12px;
+    font-weight: bold;
+    height: 150px;
+    line-height: 20px;
+    padding: 10px;
+}
+div#main-content div#cert-details div#right-nav-courses div#course-details div#info {
+	width:454px;
+	float:left;
+}
+div#main-content div#cert-details div#right-nav-courses div#course-details div#info span {
+    color: #4595D0;
+	font-size: 20px;
+	font-weight: bold;	
+}	
+div#main-content div#cert-details div#right-nav-courses div#course-details div#video {
+	width:250px;
+	float:left;
+}	
+
+div#main-content div#cert-details div#right-nav-courses div#status {
+    background-color: #579CD0;
+    float: left;
+    margin: 4px 2px 0 0;
+    width: 319px;
+}
+
+div#main-content div#cert-details div#right-nav div#full-list div#event-status {
+   background-color: #579CD0;
+   float: left;
+   margin: 4px 0 0 6px;
+   padding-left: 4px;
+   width: 400px;
+}
+div#cert-details div#right-nav div#full-list div#status-barbg{
+	background-color: #86B7DB;
+    margin: 7px;
+    padding-top: 5px;
+    width: 200px;
+    text-align: center;
+}
+div#cert-details div#right-nav div#full-list div#status-barbg a {
+	color: #FFFFFF;
+	
+	text-decoration: none;
+}
+div#cert-details div#right-nav div#event-status div#status-barbg span {
+	font-weight:bold;
+	color: #D06782; 
+}
+div#cert-details div#right-nav div#full-list div#status-barbg div#status-bar {
+	background-color: #ABC229;
+    color: #FFFFFF;
+    height: 25px;
+    margin-top: -21px;
+    
+}
+div#cert-details div#right-nav-courses div#status-barbg{
+	background-color: #86B7DB;
+    margin: 7px;
+    padding-top: 5px;
+    width: 200px;
+    text-align: center;
+}
+div#cert-details div#right-nav-courses div#status-barbg a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+div#cert-details div#right-nav-courses div#status-barbg span {
+	font-weight:bold;
+	color: #D06782; 
+}
+div#cert-details div#right-nav-courses div#status-barbg div#status-bar {
+	background-color: #ABC229;
+    color: #FFFFFF;
+    height: 25px;
+    margin-top: -21px;
+    
+}
+
+div#main-content div#cert-details div#right-nav div#full-list div#favorite {
+	float: left;
+    margin: 4px;
+    padding-right: 4px;
+    width: 130px;
+}
+div#main-content div#cert-details div#right-nav-courses div#more {
+    float: left;
+    margin: 4px 2px;
+    width: 137px;
+}
+div#main-content div#cert-details div#right-nav-courses div#favorite {
+	float: left;
+    margin: 4px 5px 0 0;
+    padding-right: 4px;
+    width: 130px;
+}
+div#main-content div#cert-details div#right-nav div#full-list div#view-courses {
+	background-color: #67A5D4;
+    float: left;
+    margin: 4px;
+    padding: 11px;
+    text-align: center;
+    width: 113px;
+    
+}
+
+div#right-nav div#full-list div#view-courses a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+div#main-content div#cert-details div#right-nav div#course {
+    background-color: #E8E7ED;
+    margin: 0 auto 12px;
+    min-height: 110px;
+    width: 700px;
+}
+
+div#main-content div#cert-details div#right-nav div#course div#details {
+	float: left;
+    font-size: 11px;
+    margin: 6px;
+    min-height: 105px;
+    overflow: auto;
+    width: 541px;
+}
+
+div#main-content div#cert-details div#right-nav div#course div#other-info {
+	float: left;
+  
+}
+div#main-content div#cert-details div#right-nav div#course div#details div#content {
+	min-height: 75px;
+    overflow: auto;
+	
+}
+div#main-content div#cert-details div#right-nav div#course div#details div#more-info{
+    background-color: #000000;
+    color: #FFFFFF;
+    float: left;
+    padding: 5px 12px 6px;
+}
+
+div#main-content div#cert-details div#right-nav div#course div#details div#progress{
+        background-color: #C66658;
+    color: #FFFFFF;
+    height: 20px;
+    margin-left: 324px;
+    padding-top: 5px;
+    text-align: center;
+    width: 200px;
+}
+
+div#cert-details div#right-nav div#progress div#status-bar{
+	background-image: url("../image/certifications/status-bg.png");
+    background-repeat: repeat-x;
+    height: 25px;
+    margin-top: -19px;
+}
+
+table td.text{
+	font-size: 10px;
+}
+div#cert-details div#right-nav div#course div#other-info table{
+	    border-collapse: collapse;
+    height: 100px;
+    margin: 5px;
+    width: 135px;
+}
+
+div#course div#other-info table td.duration{
+	height: 72px;
+	text-align: center;
+	
+}
+div#course div#other-info table td.text {
+	text-align: center;
+	background-color: #999999;
+}
+
+<!-- Start --------------------------------------------------End -->
+
+div#right-nav div#program em {
+    color: #569ABD;
+    font-style: normal;
+}
+div#right-nav div#program h3 {
+        color: #4397D5;
+    font-size: 1.3em;
+}
+div#right-nav div#program h4 {
+    font-size: 1.1em;
+}
+div#cert-details div#right-nav div#program {
+	padding: 20px 20px;
+}
+
+div#cert-details div#right-nav div#program-header {
+   padding-left: 72px;
+}
+
+div#cert-details div#right-nav div#program-header img {
+    float: left;
+    margin-right: 12px;
+}
+div#cert-details div#right-nav div#program-header div#laptop-img {
+    float: left;
+    margin-bottom: 6px;
+}
+
+div#cert-details div#right-nav div#program-header h3 {
+   vertical-align: top;
+}
+
+div#cert-details div#right-nav div#program-pip-video {
+    height: 65px;
+}
+div#cert-details div#right-nav div#program-pip-video div#program-pip-video-text {
+    font-size: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+div#cert-details div#right-nav div#program-pip-video a {
+	background: url("../image/function-button.jpg") repeat-x scroll left top #62A1C2;
+    border-color: #E0E0E5 #7C7D77 #7C7D77 #E0E0E5;
+    border-style: solid;
+    border-width: 2px;
+    color: #404040;
+    display: inline-table;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 5px auto 3px;
+    padding: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 263px;
+}
+div#cert-details div#right-nav div#program-pip-video img {
+	 margin-left: 15px;
+}
+div#cert-details div#right-nav div#program-pip-video h3 {
+	display: inline;
+}
+
+div#cert-details div#right-nav div#program-info {
+	margin-bottom: 0px;
+}
+div#cert-details div#right-nav div#program-info h4 {
+	margin-bottom: 8px;
+}
+div#cert-details div#right-nav div#program-info p {
+	margin-bottom: 20px;
+}
+div#cert-details div#right-nav div#program-info ul {
+	margin-bottom: 20px;
+	list-style: disc outside none;
+	color: #4397D5;
+}
+div#cert-details div#right-nav div#program-info ol {
+	margin-bottom: 20px;
+	margin-left: 40px;
+	list-style: decimal outside none;
+	font-weight: bold;
+	color: #569abd;
+}
+div#cert-details div#right-nav div#program-info ul li,
+div#cert-details div#right-nav div#program-info ol li {
+	margin-bottom: 40px;
+}
+div#cert-details div#right-nav div#program-info ul.medium-list li {
+	margin-bottom: 10px;
+}
+div#cert-details div#right-nav div#program-info ul.short-list li {
+	margin-bottom: 2px;
+}
+div#cert-details div#right-nav div#program-info ol li ul,
+div#cert-details div#right-nav div#program-info ul li ul {
+	margin-top: 2px;
+	margin-bottom: 2px;
+	list-style: circle outside none;
+}
+div#cert-details div#right-nav div#program-info ol li ul li,
+div#cert-details div#right-nav div#program-info ul li ul li {
+	margin-bottom: 2px;
+}
+div#cert-details div#right-nav div#program-info ul li h4,
+div#cert-details div#right-nav div#program-info ol li h4 {
+	margin-bottom: 4px;
+	color: #404040;
+}
+div#cert-details div#right-nav div#program-info ul li span,
+div#cert-details div#right-nav div#program-info ol li span {
+	color: #404040;
+	font-weight: normal;
+}
+div#cert-details div#right-nav div#program-info ul li div.program-action,
+div#cert-details div#right-nav div#program-info ol li div.program-action {
+	text-align: center;
+}
+div#cert-details div#right-nav div#program-info ul li div.program-action a,
+div#cert-details div#right-nav div#program-info ol li div.program-action a {
+	display: inline-block;
+	margin-top: 8px;
+	color: white;
+	background-image: url("../image/button-bg.gif");
+	background-repeat: no-repeat;
+	font-size: 1.4em;
+	width: 290px;
+	height: 40px;
+	font-weight: bold;
+	text-decoration: none;
+}
+div#cert-details div#right-nav div#program-info ul li div.program-action a:hover,
+div#cert-details div#right-nav div#program-info ol li div.program-action a:hover {
+	background-image: url("../image/button-bg-hover.gif");
+}
+div#cert-details div#right-nav div#program-info ul li div.program-action a span,
+div#cert-details div#right-nav div#program-info ol li div.program-action a span {
+	color: inherit;
+	font-weight: bold;
+	display: block;
+	padding-top: 11px;
+}
+div#cert-details div#right-nav div#program-info div.important {
+	width: 290px;
+	margin: 20px 0px 20px 202px;
+	border: 2px solid #569abd;
+	font-size: 1.2em;
+}
+div#cert-details div#right-nav div#program-info div.important h5 {
+	padding: 6px;
+	text-align: center;
+	background-color: #d8ddd8;
+	margin: 0;
+	border-bottom: 2px solid #569abd;
+}
+div#cert-details div#right-nav div#program-info div.important ul {
+	margin: 12px 12px 12px 40px;
+}
+div#cert-details div#right-nav div#program-info div.important ul li {
+}
+
+div#cert-details div#right-nav div#program-action {
+	text-align: center;
+}
+div#cert-details div#right-nav div#program-action h3 {
+	margin-bottom: 8px;
+}
+div#cert-details div#right-nav div#program-action a {
+	margin: 5px auto;
+	display: block;
+	width: 300px;
+	color: #FFFFFF;
+	font-size: 1.4em;
+	text-decoration: none;
+	background: #4294ce url("../image/certifications/certlevel-bg.png") repeat-x top left;
+	text-align: center;
+	padding: 5px 0px;
+	font-weight: bold;
+	border-top: 2px solid #e0e0e5;
+	border-left: 2px solid #e0e0e5;
+	border-right: 2px solid #7c7d77;
+	border-bottom: 2px solid #7c7d77;
+}
+div#cert-details div#right-nav div#program-action a:hover {
+	background: #4294ce url("../image/certifications/certlevel-bg.png") repeat-x top left;
+}
+div#cert-details div#right-nav div#program-action a:active {
+	border-top: 2px solid #7c7d77;
+	border-left: 2px solid #7c7d77;
+	border-right: 2px solid #e0e0e5;
+	border-bottom: 2px solid #e0e0e5;
+}
+
+
+div#cert-details div#right-nav div#course-info {
+	
+}
+div#cert-details div#right-nav div#course-info table th {
+	background-color: #7c7d77;
+	color: white;
+	text-align: left;
+}
+div#cert-details div#right-nav div#course-info table th span {
+	display: block;
+	width: 96px;
+}
+div#cert-details div#right-nav div#course-info table th,
+div#cert-details div#right-nav div#course-info table td {
+	vertical-align: top;
+	border-bottom: 4px solid white;
+	padding: 2px 4px;
+}
+div#cert-details div#right-nav div#course-info table th.title span {
+	display: none;
+}
+div#cert-details div#right-nav div#course-info table td.title span {
+	font-weight: bold;
+	font-size: 1em;
+	color: #7c7d77;
+}
+table.course-person-more {}
+table.course-person-more td {
+	vertical-align: top;
+}
+table.course-person-more td h4 {
+	margin: 10px 10px 2px 10px;
+	color: #569abd;
+	font-size: 1.2em;
+}
+table.course-person-more td h6 {
+	margin: 2px 10px 10px 10px;
+	font-size: 0.9em;
+}
+table.course-person-more td p {
+	margin: 10px;
+	line-height: 1.2em;
+}
+table.course-person-more td img {
+	margin: 10px;
+	margin: 10px;
+}
+
+
+
+
+div#cert-details div#right-nav div#course-launch {
+	text-align: center;
+	margin: 0 0 20px 10px;
+}
+div#cert-details div#right-nav div#course-launch a {
+	margin: 5px auto;
+	display: block;
+	width: 150px;
+	color: #404040;
+	font-size: 1.4em;
+	text-decoration: none;
+	background: #62a1c2 url("../image/function-button.jpg") repeat-x top left;
+	text-align: center;
+	padding: 5px 0px;
+	font-weight: bold;
+	border-top: 2px solid #e0e0e5;
+	border-left: 2px solid #e0e0e5;
+	border-right: 2px solid #7c7d77;
+	border-bottom: 2px solid #7c7d77;
+}
+div#cert-details div#right-nav div#course-launch a:hover {
+	background: #427997 url("../image/function-button-hover.jpg") repeat-x top left;
+}
+div#cert-details div#right-nav div#course-launch a:active {
+	border-top: 2px solid #7c7d77;
+	border-left: 2px solid #7c7d77;
+	border-right: 2px solid #e0e0e5;
+	border-bottom: 2px solid #e0e0e5;
+}
+div#cert-details div#right-nav div#course-launch span.note {
+	font-style: italic;
+}
+div#cert-details div#right-nav div#course-launch table#event-list {
+	border: 1px solid;
+	width: 675px;
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr td {
+	padding: 8px;
+	font-size: 12px;
+	text-align: left;
+	vertical-align: top;
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr td.title span.other {
+	display: block;
+	font-size: 0.6em;
+	margin-top: 3px;
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr.emphasize td {
+	background-color: #bed0e4;
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr td.location {
+	color: #569abd;
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr td.time span.other {
+	display: block;
+	font-size: 0.6em;
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr td.register {
+	text-align: right;
+}
+zzzdiv#cert-details div#right-nav div#course-launch table#event-list tr td.register form input.register-button {
+	color: #e0e0e5;
+	font-size: 12pt;
+	font-weight: bold;
+	text-decoration: underline;
+	background-color: #569abd;
+	padding: 0px 8px;
+	border-width: 3px;
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr td.register form input.register-button {
+	background: url("../image/function-button.jpg") repeat-x scroll 0 0 transparent;
+    border-color: #E0E0E5 #7C7D77 #7C7D77 #E0E0E5;
+    border-image: none;
+    border-style: solid;
+    border-width: 2px;
+    color: #404040;
+    font-size: 0.8em;
+    font-weight: bold;
+    height: 25px;
+    padding-bottom: 4px;
+    width: 100px;
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr td.register form input.register-button:hover {
+	background: url("../image/function-button-hover.jpg");
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr td.register form input.register-button:active {
+	border-top: 2px solid #7c7d77;
+	border-left: 2px solid #7c7d77;
+	border-right: 2px solid #e0e0e5;
+	border-bottom: 2px solid #e0e0e5;
+}
+div#cert-details div#right-nav div#course-launch table#event-list tr td.register span.closed {
+	font-size: 10pt;
+	color: #d87d7d;
+	font-style: italic;
+}
+
+div#cert-details div#right-nav div#course-info div#test-computer-link a {
+ 	background: url("../image/function-button.jpg") repeat-x scroll 0 0 transparent;
+    border-color: #E0E0E5 #7C7D77 #7C7D77 #E0E0E5;
+    border-image: none;
+    border-style: solid;
+    border-width: 2px;
+    color: #404040;
+    display: block;
+    font-weight: bold;
+    height: 21px;
+    margin-left: 425px;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+}

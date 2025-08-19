@@ -1,0 +1,93 @@
+
+#modal-content,#modal-data {
+	display: none;
+}
+#subscript{
+	font-size: 7pt;
+}
+/* Overlay */
+#overlay {
+	background-color: #000;
+	
+}
+
+/* modal-container */
+#modal-container {
+	background-color: #eee;
+	color: #000;
+	font-family: Helvetica,Arial,Sans-serif;
+	padding-bottom: 4px;
+	width: 600px;
+	-moz-border-radius-bottomleft: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-radius: 0 0 6px 6px;
+	-moz-box-shadow: 0 0 64px #000;
+	-webkit-box-shadow: 0 0 64px #000;
+	box-shadow: 0 0 64px #000;
+	text-align: left;
+}
+
+
+#modal-container #modal-title {
+	font-size: 11pt;
+	color: #000;
+	background-color: #ddd;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	padding: 8px;
+}
+
+#modal-container .close {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#modal-container .close a {
+	display: block;
+	color: #777;
+	font-weight: bold;
+	padding: 6px 6px 0;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #f4f4f4;
+}
+
+#modal-container .close a:hover {
+	color: #000;
+}
+
+
+#modal-container h2 {
+	margin: 10px 0 6px;
+}
+
+#modal-container p {
+	margin-bottom: 10px;
+}
+
+div#modal-data div#modal-button a:hover{
+	background: url("../images/function-button-hover.jpg") repeat-x scroll left top #427997;
+}
+div#modal-data div#modal-button a{
+	background: url("../images/function-button.jpg") repeat-x scroll left top #62A1C2;
+    border-color: #E0E0E5 #7C7D77 #7C7D77 #E0E0E5;
+    border-style: solid;
+    border-width: 2px;
+    color: #404040;
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 11px auto;
+    padding: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 300px;
+}	
+.close-text{
+	color:#000;
+	font-size:12px;
+	font-weight:bold;	
+}

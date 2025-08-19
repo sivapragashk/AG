@@ -1,0 +1,455 @@
+
+
+div#right-nav div#program em {
+    color: #4397D5;
+    font-style: normal;
+}
+div#cert-details div#right-nav div#reg-header {
+	color: #4397D5;
+    font-size: 1.8em;
+    margin: 2px 0 8px 13px;
+    width: 300px;
+}
+div#cert-details div#right-nav div#reg-summary {
+	margin-bottom: 20px;
+	margin-left: 0px;
+	width: 200px;
+	font-size: 0.8em;
+	float: left;
+}
+div#cert-details div#right-nav div#reg-summary img {
+	margin-left: 35px;
+}
+div#cert-details div#right-nav div#reg-summary h4 {
+	color: #4397D5;
+	font-size: 1.4em;
+	display: block;
+	text-align: center;
+	margin-bottom: 5px;
+}
+div#cert-details div#right-nav div#reg-summary table {
+	font-size: 1em;
+}
+div#cert-details div#right-nav div#reg-summary table th {
+	color: #4397D5;
+	font-size: 1.1em;
+	font-weight: normal;
+	text-align: right;
+	padding-right: 2px;
+	padding-bottom: 5px;
+	vertical-align: top;
+}
+div#cert-details div#right-nav div#reg-summary table td {
+	padding-bottom: 5px;
+}
+div#cert-details div#right-nav div#reg-summary table td ul.cost-summary li {
+	display: block;
+	width: 5em;
+	text-align: right;
+	padding-bottom: 2px;
+}
+div#cert-details div#right-nav div#reg-summary table td ul.cost-summary li em {
+	display: block;
+	color: #404040;
+	border-top: 1px solid #606060;
+	padding-left: 5px;
+}
+div#cert-details div#right-nav div#reg-summary a#cancel-button {
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+	height: 20px;
+	background-color: #4397D5;
+	text-align: center;
+	font-weight: bold;
+	border-top: 2px solid #e0e0e5;
+	border-left: 2px solid #e0e0e5;
+	border-right: 2px solid #7c7d77;
+	border-bottom: 2px solid #7c7d77;
+	margin: 20px auto 0px auto;
+	width: 150px;
+}
+div#cert-details div#right-nav div#reg-summary a#cancel-button span {
+	display: block;
+	padding-top: 5px;
+}
+div#cert-details div#right-nav div#reg-summary a#cancel-button:hover {
+	background: #427997 url("../image/function-button-hover.jpg") repeat-x top left;
+}
+div#cert-details div#right-nav div#reg-summary a#cancel-button:active {
+	border-top: 2px solid #7c7d77;
+	border-left: 2px solid #7c7d77;
+	border-right: 2px solid #e0e0e5;
+	border-bottom: 2px solid #e0e0e5;
+}
+
+
+div#cert-details div#right-nav div#reg-info div#page-buttons {
+	float: right;
+}
+div#cert-details div#right-nav div#reg-info div#page-buttons a#next {
+	display: block;
+	background-color: #4397D5;
+	color: #FFFFFF;
+	background-repeat: repeat-x;
+	width: 160px;
+	height: 21px;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #FFFFFF;
+	border: none;
+	border-top: 2px solid #e0e0e5;
+	border-left: 2px solid #e0e0e5;
+	border-right: 2px solid #7c7d77;
+	border-bottom: 2px solid #7c7d77;
+	text-decoration: none;
+}
+div#cert-details div#right-nav div#reg-info div#page-buttons a#next:hover {
+	background: url("../image/function-button-hover.jpg");
+}
+div#cert-details div#right-nav div#reg-info div#page-buttons a#next span {
+	display: block;
+	padding-top: 5px;
+	text-align: center;
+}
+div#cert-details div#right-nav div#reg-info div#page-buttons a#next.large {
+	width: 200px;
+}
+div#cert-details div#right-nav div#reg-info div#page-buttons span.extra-text {
+	display: block;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+
+div#cert-details div#right-nav div#reg-info {
+    margin: 20px 0 0 20px;
+	width: 480px;
+	float: left;
+}
+
+div#cert-details div#right-nav div#reg-info h4 {
+	display: block;
+	width: 450px;
+	height: 32px;
+	background-color: #4397D5;
+	color: #e0e0e5;
+}
+div#cert-details div#right-nav div#reg-info h4 span {
+	display: block;
+	padding-left: 10px;
+	padding-top: 8px;
+}
+
+div#cert-details div#right-nav div#reg-info div#message {
+	border: 1px solid #4397D5;
+    margin: 10px;
+    padding: 10px;
+}
+div#cert-details div#right-nav div#reg-info div#message span.important {
+	display: block;
+	color: #4397D5;
+	font-size: 1.2em;
+	padding: 10px 0px;
+	text-align: center;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table {
+	width: 450px;
+	margin-bottom: 20px;
+	background-color: #E8E7ED;
+	font-size: 12px;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table td {
+	position: relative;
+	vertical-align: middle;
+	border-bottom: 1px solid #b6bbb5;
+	height: 32px;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table tr.primary td {
+	border-bottom: 10px solid #b6bbb5;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table tr.special td {
+	border-bottom: 10px solid #b6bbb5;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table td a {
+	display: block;
+	height: 32px;
+	color: #404040;
+	text-decoration: none;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table td.highlight {
+	background-image: url("../image/row-highlight.jpg");
+	background-repeat: repeat-x;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table td.highlight a {
+	color: #e0e0e5;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table tr.special td a span {
+	font-style: italic;
+	color: #4397D5;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table tr.special td a span.arrow {
+	font-style: normal;
+	color: #404040;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table tr.special td.highlight a span {
+	color: #e0e0e5;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table tr.special td.highlight a span.arrow {
+	color: #e0e0e5;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table td span {
+	padding: 8px 4px 4px 12px;
+	display: block;
+	font-size: 1.2em;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table td span.minor {
+	padding: 11px 4px 4px 4px;
+	font-size: 0.8em;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table td span.arrow {
+	padding: 2px 8px 0px 0px;
+	display: block;
+	font-size: 1.7em;
+	text-align: right;
+}
+div#cert-details div#right-nav div#reg-info table.selection-table tr.alreadyreged td span {
+	font-style: italic;
+	color: #909090;
+}
+
+
+
+div#cert-details div#right-nav div#reg-info table.data-entry {
+	width: 480px;
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry th {
+	color: #4397D5;
+    text-align: right;
+    width: 150px;
+    font-weight: normal;
+}
+
+div#cert-details div#right-nav div#reg-info table.data-entry.questions th.table-label {
+	font-weight: bold;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry th span {
+	display: block;
+	width: 150px;
+	margin: 2px 4px;
+}
+
+div#cert-details div#right-nav div#reg-info table.data-entry.contact th {
+	font-weight: normal;
+	width: 100px;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry.contact th span {
+	width: 100px;
+}
+div#cert-details div#right-nav div#reg-info .required-note{
+	color: #4397D5;
+	font-weight: bold;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry.questions th {
+	background-color: transparent;
+	color: #4397D5;
+	text-align: left;
+	width: 100px;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry th.large {
+	width: 420px;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry th.large span {
+	width: 420px;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry td {
+	padding: 2px 4px;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry th,
+div#cert-details div#right-nav div#reg-info table.data-entry td {
+	border-bottom: 4px solid white;
+	vertical-align: top;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry.questions th,
+div#cert-details div#right-nav div#reg-info table.data-entry.questions td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 4px solid #e0e0e5;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry.questions th.table-label {
+	border-bottom: 4px solid white;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry.questions th.large {
+	border-bottom: none;
+	padding-bottom: 0px;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry th.table-label {
+    background-color: #E8E7ED;
+    color: #4397D5;
+    font-size: 0.85em;
+    font-weight: bold;
+    padding: 6px 4px;
+    text-align: left;
+    text-transform: uppercase;
+    width: auto;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry th.table-label span {
+	width: auto;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry th em {
+	color: inherit;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry.questions th em {
+	color: #569abd;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry th strong {
+	color: inherit;
+	font-size: 1.0em;
+	font-variant: normal;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry.questions th strong {
+	color: #569abd;
+	font-variant: small-caps;
+	font-size: 1.1em;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry td input.text,
+div#cert-details div#right-nav div#reg-info table.data-entry td select {
+	width: 300px;
+	border: 1px solid #4397D5;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry td input.text-short {
+	width: 100px;
+	border: 1px solid #4397D5;
+}
+div#cert-details div#right-nav div#reg-info table.data-entry td ul {
+	list-style: disc inside none;
+	margin-left: 2px;
+}
+div#cert-details div#right-nav div#reg-info span.note {
+	font-size: 0.8em;
+	color: #bf5460;
+}
+div#cert-details div#right-nav div#reg-info span.security-note {
+	display: block;
+	margin: 20px 0px;
+	padding: 8px;
+	font-size: 0.8em;
+	border: 1px solid #569abd;
+}
+div#cert-details div#right-nav div#reg-info span.field-example {
+	display: block;
+	color: #569abd;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+div#cert-details div#right-nav div#reg-info span.field-example a {
+	font-size: 1.1em;
+}
+div#cert-details div#right-nav div#reg-help {
+	clear: both;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 0.9em;
+}
+div#cert-details div#reg-info div#please-wait {
+    background-color: white;
+    background-image: url("../image/processing.gif");
+    background-position: left center;
+    background-repeat: no-repeat;
+    border: 2px solid #569ABD;
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+}
+div#cert-details div#reg-info div#please-wait span {
+    color: #569ABD;
+    display: block;
+    font-weight: bold;
+    padding: 5px 0 5px 35px;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list {
+	width: 450px;
+	margin-bottom: 20px;
+	background-color: #e0e0e5;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li {
+	position: relative;
+	display: block;
+	border-bottom: 1px solid #b6bbb5;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li input.checkbox {
+	position: absolute;
+	top: 12px;
+	left: 6px;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li span.title {
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 15px 15px 15px 30px;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li table.item-info {
+	display: block;
+	margin: -10px 15px 15px 30px;
+	width: 375px;
+	font-size: 0.9em;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li table.item-info {
+	display: block;
+	margin: -10px 15px 15px 30px;
+	width: 375px;
+	font-size: 0.9em;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li table.item-info th {
+	color: #404040;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	color: #569abd;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li table.item-info td {
+	width: 125px;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li.full input.checkbox,
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li.full table.item-info,
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li.full span.description {
+	display: none;
+}
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li.disabled input.checkbox,
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li.disabled table.item-info,
+div#cert-details div#right-nav div#reg-info  ul.large-selection-list li.disabled span.description {
+	display: none;
+}
+div#cert-details div#right-nav div#reg-info div#pre-page-buttons {
+	float: left;
+}
+div#cert-details div#right-nav div#reg-info div#pre-page-buttons a#previous {
+	display: block;
+	background-color: #4397D5;
+	color: #FFFFFF;
+	background-repeat: repeat-x;
+	width: 160px;
+	height: 21px;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #FFFFFF;
+	border: none;
+	border-top: 2px solid #e0e0e5;
+	border-left: 2px solid #e0e0e5;
+	border-right: 2px solid #7c7d77;
+	border-bottom: 2px solid #7c7d77;
+	text-decoration: none;
+}
+div#cert-details div#right-nav div#reg-info div#pre-page-buttons a#previous:hover {
+	background: url("../image/function-button-hover.jpg");
+}
+div#cert-details div#right-nav div#reg-info div#pre-page-buttons a#previous span {
+	display: block;
+	padding-top: 5px;
+	text-align: center;
+}
+div#cert-details div#right-nav div#reg-info div#pre-page-buttons a#previous.large {
+	width: 200px;
+}
