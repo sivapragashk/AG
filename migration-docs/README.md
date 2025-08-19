@@ -95,3 +95,67 @@ PR tracking:
 - Branch: devin/1755608273-java-to-python-migration
 - Link to Devin run: https://app.devin.ai/sessions/396edd4a1bf04a87b18a3185fbeda5e0
 - Requested by: sivapragashk (@sivapragashk)
+## Legacy → Target Dependency Matrix
+
+| Area | Legacy (Java/JSP) | Target (Python/JS) | Status |
+|---|---|---|---|
+| Web framework | javax.servlet, web.xml filters/servlets | FastAPI + Pydantic | Done (core) |
+| Views | JSP | React (Vite + TS + Tailwind) | Done (Event Registration) |
+| Auth/SSO | CAS filters (SingleSignOut, Authentication, Validation, RequestWrapper) | Adapter interface; planned python-cas or reverse-proxy integration | Stub/Planned |
+| DB access | JNDI Datasources (EkpDS, Onyx*) via DAO/DataUtils | Repository layer; SQLAlchemy/DSN config | Stub/Planned |
+| Payments | PayPal (context-params) | Payments adapter; PayPal SDK/sandbox | Stub/Planned |
+| XML-RPC | HDCATALOG_* endpoints | xmlrpc.client adapter | Stub/Planned |
+| Email | Email server URL | SMTP adapter (console in dev) | Stub |
+| Config | web.xml context-params | pydantic-settings + .env | Done |
+
+## Servlet/Route Mapping
+
+- EventRegisterControlServlet → /api/event-register/* with React routes at /event-register/*
+- CourseControlServlet → /api/courses, /api/courses/{id}, /api/courses/{id}/launch; React /courses
+- ProgramControlServlet → /api/programs, /api/programs/{id}, /api/programs/{id}/enroll; React /programs
+- ToDoListControlServlet + ToDoListActivityControlServlet → /api/todos, /api/todos/{id}/complete; React /todos
+- Pip/Pdp/Pfp Signup servlets → /api/signup/{pip|pdp|pfp}; React /signup/* (planned)
+
+## Code Comparisons
+
+Legacy forwarding (BaseControlServlet) vs new JSON APIs and SPA routing:
+- Legacy: request attributes + RequestDispatcher forward to JSP
+- Target: FastAPI endpoints return JSON; React displays and navigates via routes
+
+DAO SQL usage (ReportDAO) vs repository interfaces:
+- Legacy: direct JDBC via DataUtils, JNDI Datasource
+- Target: repository abstraction; SQLAlchemy/DSN configurable (planned)
+
+## How To Configure
+
+Backend .env.example keys:
+- API_CORS_ORIGINS
+- HDCATALOG_XMLRPC_URL, HDCATALOG_XMLRPC_ACCESS_KEY
+- EMAIL_SERVER_URL
+- PAYPAL_USERNAME, PAYPAL_VENDOR, PAYPAL_PARTNER, PAYPAL_PASSWORD, PAYPAL_HOSTADDR
+- EKP_SERVER_URL
+- ONYX_WRITE
+
+Frontend .env.example:
+- VITE_API_BASE_URL
+
+## New Stubbed Routers (Phase 1)
+
+- backend/app/api/courses.py
+- backend/app/api/todos.py
+- backend/app/api/programs.py
+- backend/app/api/signup_pip_pdp_pfp.py
+
+Included in app at:
+- backend/app/main.py (app.include_router for /api/courses, /api/todos, /api/programs, /api/signup)
+
+React placeholder pages:
+- frontend/src/pages/Courses.tsx
+- frontend/src/pages/Todos.tsx
+- frontend/src/pages/Programs.tsx
+- Linked in frontend/src/App.tsx
+
+## Notes
+
+- Phase 1 intentionally uses stubs for external integrations to complete migration structure quickly.
+- No end-to-end manual testing is required per request; minimal build/type checks recommended.

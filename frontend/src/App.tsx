@@ -7,6 +7,9 @@ import User from "@/pages/event-register/User";
 import Questions from "@/pages/event-register/Questions";
 import Payment from "@/pages/event-register/Payment";
 import Confirm from "@/pages/event-register/Confirm";
+import Courses from "@/pages/Courses";
+import Todos from "@/pages/Todos";
+import Programs from "@/pages/Programs";
 
 export default function App() {
   return (
@@ -22,6 +25,10 @@ export default function App() {
             <Link to="/event-register/questions">Questions</Link>
             <Link to="/event-register/payment">Payment</Link>
             <Link to="/event-register/confirm">Confirm</Link>
+            <span className="text-gray-300">|</span>
+            <Link to="/courses">Courses</Link>
+            <Link to="/todos">ToDos</Link>
+            <Link to="/programs">Programs</Link>
           </nav>
         </div>
       </header>
@@ -35,6 +42,9 @@ export default function App() {
           <Route path="/event-register/questions" element={<Questions />} />
           <Route path="/event-register/payment" element={<Payment />} />
           <Route path="/event-register/confirm" element={<Confirm />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/todos" element={<Todos />} />
+          <Route path="/programs" element={<Programs />} />
         </Routes>
       </main>
       <footer className="border-t bg-white">
